@@ -1,6 +1,18 @@
+# Python/venv & IDE
 .venv/
-assets/*
-data/*
 *.ipynb_checkpoints/
 .DS_Store
 .idea
+
+# Assets (ignore everything under assets/)
+assets/*
+
+# Data (ignore everything under data/...)
+data/*
+
+# ...except allow the raw/ directory itself,
+# then re-ignore everything inside raw/,
+# and finally un-ignore just this one file.
+!data/raw/
+data/raw/*
+!data/raw/sample_submission.csv
